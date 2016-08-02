@@ -1,0 +1,97 @@
+ section{
+            margin: auto;
+            width: 80%;
+            font-family: sans-serif;
+        }
+        h1{
+            font-size: 24px;
+            text-align: center;
+        }
+        .sort:after {
+          content: '\25b2';
+        }
+        .reverse:after {
+          content: '\25bc';
+        }
+        .bg-gray{
+            background-color:#cfcfcf;
+        }
+         .bg-white{
+            background-color:#fff;
+        }
+        table {
+            width: 100%;
+            font-size: 14px;
+            
+            }
+        table span{
+            font-size: 15px;
+            font-weight: 900;
+            padding: 0 10px;
+        }
+
+        table tr {
+            height: 26px;
+            padding: 5px;
+           
+            
+        }
+        td {
+            padding: 5px;
+        }
+        figure {
+            margin-left: 0;
+        }
+        figure > span {
+           font-size: 15px;
+           font-weight: 900;
+            
+        }
+         figure input {
+            margin-left: 7px;
+             width: 280px;
+             height: 30px;
+             text-indent: 5px;
+        }
+        .add-btn {
+            float: right;
+            margin-bottom: 10px;
+        }
+        form {
+            margin-top: 10px;
+            height: 30px;
+            margin-bottom: 200px;
+        }
+        form input {
+            margin-right: 10px;
+            margin-left: 5px;
+            height: 30px;
+            text-indent: 5px;
+        }
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+        
+        button, input[type=submit] {
+            background-color: darkblue;
+            color: #fff;
+            border: 0;
+            
+        }
+        aside > button{
+            width: 120px;
+            font-weight: 600;
+            height: 30px;
+        }
+        input[ng-disabled] {
+                width: 80px;
+                font-weight: 600;
+                background-color: dodgerblue;
+                height: 30px;
+        }
+        label {
+            display: block;
+        }
+        .invalid-value{
+            color: red;
+        }

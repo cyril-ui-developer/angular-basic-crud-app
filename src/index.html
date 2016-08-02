@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="webapp">
+<head>
+  <title>Angular JS Basic CRUD Application</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body ng-controller="MainCtlr as store"> 
+    <section>
+        <h1>Angular JS Case Study</h1>
+        <figure><span>Search</span><input type="text" ng-model="store.query" placeholder="Search for stores by name or number"></figure>
+        <aside>
+               <!-- <button class="add-btn" ng-click="store.hideFormFunc()">Add Store</button>-->
+            
+               <button class="add-btn" ng-click="store.createModal()">Add Store</button>
+            
+                <form name="addStoreForm" ng-show="store.hideForm" novalidate >
+
+                    <label>Store Name</label><input type="text" value=""  name="name"    ng-model="store.data.name" ng-required="true">
+                     <span class="invalid-value" ng-show="addStoreForm.name.$touched && addStoreForm.name.$invalid">Valid Store Name Required</span>
+
+
+                    <label>Store Number</label><input type="text" value=""  name="number"    ng-model="store.data.number" ng-required="true">
+                      <span class="invalid-value" ng-show="addStoreForm.number.$touched && addStoreForm.number.$invalid">Valid Store Number Required</span>
+
+
+                    <label>Store Location</label><input type="text" value="" name="location"   ng-model="store.data.location" ng-required="true">
+                      <span class="invalid-value" ng-show="addStoreForm.location.$touched && addStoreForm.location.$invalid">Valid Store Location Required</span>
+
+
+                    <input type="submit" ng-click="store.addStore()" value="Save"  ng-disabled="addStoreForm.$invalid">     
+            </form>
+            </aside>
+                <table width="750px" border="1">
+                    <tr>
+                        <th width="200px"><span>Name</span><button ng-click="store.sortFunc('name')" class="sort" ng-class="{'reverse' : store.reverse}" ></button>
+                        </th> 
+                        <th width="150px"><span>Number</span>
+                        <button ng-click="store.sortFunc('number')" class="sort" ng-class="{'reverse' : store.reverse}" ></button>
+                        </th> 
+                        <th width="300px"><span>Location</span>
+                            <button ng-click="store.sortFunc('location')" class="sort" ng-class="{'reverse' : store.reverse}" ></button>
+                        </th>
+                    </tr>
+                    <tr ng-class="{ 'bg-gray': $even, 'bg-white': $odd }" ng-repeat="istore in store.data | filter: store.search | orderBy:store.sortType:store.reverse ">
+                    <!--<td>{{istore.name}}</td> <td>{{istore.number}}</td> <td>{{istore.location}}</td>-->
+                        <td> <input type="text" ng-model="istore.name"></td>
+                          <td> <input type="text" ng-model="istore.number"></td>
+                          <td> <input type="text" ng-model="istore.location"></td>
+                        
+                       <!--<td width="50px"> <button class="add-btn" ng-click="store.editProduct(number)">Edit</button></td>-->
+                      <td width="50px"> <button class="add-btn" ng-click="store.deleteModal(istore)">Delete</button></td>                
+                    </tr>
+                 </table>
+          </section>
+
+        <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.js"></script>
+        <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+        <script src="http://underscorejs.org/underscore.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/service.js"></script>
+        <script src="js/controller.js"></script>
+        <script src="js/escape.directive.js"></script>
+    </body>
+</html>
