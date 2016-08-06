@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "GruntApp",
+  "name": "angular-basic-crud-app",
   "private": true,
   "devDependencies": {
     "bower": "1.5.2",
@@ -13,7 +13,7 @@
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-uncss": "^0.6.0"
+    "grunt-uncss": "^0.6.1"
   },
   "dependencies": {
     "grunt-contrib-jshint": "^1.0.0"
