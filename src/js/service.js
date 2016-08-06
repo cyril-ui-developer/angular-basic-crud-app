@@ -1,5 +1,5 @@
 (function(){
-    'use strict'
+    'use strict';
              
             angular.module('webapp')
 
@@ -23,12 +23,11 @@
                      }else{
                          var maxId = _.max(data, function(entry){
                              return entry.newId;
-                             console.log(entry.newId)
-                             newId = maxId.id + 1;
+                                    newId = maxId.id + 1;
                              return newId;
-                         })
+                         });
                      }
-                 }
+                 };
                         return  {
                                     getData: function(){
                                         return  data;
@@ -42,8 +41,7 @@
                                                /* vm.data.name = ""; 
                                                 vm.data.number = "";
                                                 vm.data.location = ""*/
-                                         console.log(entry.id)
-                                        },
+                                              },
                             getOneProduct: function(params){
                                             var oneStore = {};
                                             angular.forEach(data, function (store) {
@@ -61,9 +59,9 @@
                                             item.number = store.number;
                                             item.location= store.location;
                                            
-                                            return true
+                                            return true;
                                           }
-                                    }
+                                    };
                     }
     
 })();

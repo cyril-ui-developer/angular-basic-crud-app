@@ -5,12 +5,11 @@
  * an `escape` keydown event.
  */
 (function(){
-    'use strict'
+    'use strict';
              
             angular.module('webapp')
 	.directive('todoEscape', function () {
-		'use strict';
-
+		
 		var ESCAPE_KEY = 27;
 
 		return function (scope, elem, attrs) {

@@ -1,5 +1,5 @@
       (function(){
-           'use strict'
+           'use strict';
            
             angular.module('webapp')
 
@@ -69,9 +69,9 @@
                         // clear input fields
                         vm.data.name = ""; 
                         vm.data.number = "";
-                        vm.data.location =""
+                        vm.data.location ="";
                         
-                    }
+                    };
                     
                     // delete items
                     /* vm.deleteStore = function(index) {
@@ -86,7 +86,7 @@
                      dataFactory.updateProduct(vm.number);
                       //$state.go('products');
                         console.log();
-                    }
+                    };
                     
                       // create model
                     vm.createModal = createModal;
@@ -135,7 +135,7 @@
                        data.push(vm.add);
                         
                         $uibModalInstance.close();
-                  }
+                  };
                 }
            
           //DeleteModalCtrl

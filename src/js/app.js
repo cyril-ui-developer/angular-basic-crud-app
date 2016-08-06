@@ -1,5 +1,5 @@
       (function(){
-            angular.module('webapp', ['ui.bootstrap'])
+            angular.module('webapp', ['ui.bootstrap']);
 
                                   
         })();
